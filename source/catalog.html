@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body class="page-body">
+    <div class="page-body__wrapper">
+      <header class="main-header">
+        <nav class="main-header__navigation main-navigation main-navigation--open main-navigation--close">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link">Фото и видео</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation">Открыть главное меню</button>
+        <a class="main-header__logo logo" href="index.html">
+          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип" width="102" height="84">
+        </a>
+        <div class="main-header__intro">
+          <img class="main-header__intro-image main-header__intro-image--inner-page" src="https://via.placeholder.com/229x39" alt="Sedona" width="229" height="39">
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="main__title">Фото и видео</h1>
+        <p class="main__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <section class="main__photo-catalog photo-catalog">
+          <h2 class="visually-hidden">Ваши фотографии</h2>
+          <article class="photo-catalog__post post">
+            <a class="post__link" href="#">
+              <img class="post__photo" src="https://via.placeholder.com/280x280" alt="Фото Бориса" width="280" height="280">
+            </a>
+            <blockquote class="post__description">
+              <p class="post__comment">неродные просторы</p>
+              <cite class="post__comment-author">Автор фото: Борис</cite>
+              <div class="post__like">
+                <button class="post__button-like" type="button">Нравится</button>
+                <span class="post__like-counter">1350</span>
+              </div>
+            </blockquote>
+          </article>
+          <article class="photo-catalog__post post">
+            <a class="post__link" href="#">
+              <img class="post__photo" src="https://via.placeholder.com/280x280" alt="Фото Сергея" width="280" height="280">
+            </a>
+            <blockquote class="post__description">
+              <p class="post__comment">Местная растительность</p>
+              <cite class="post__comment-author">Автор фото: Сергей</cite>
+              <div class="post__like">
+                <button class="post__button-like" type="button">Нравится</button>
+                <span class="post__like-counter">143</span>
+              </div>
+            </blockquote>
+          </article>
+          <article class="photo-catalog__post post">
+            <a class="post__link" href="#">
+              <img class="post__photo" src="https://via.placeholder.com/280x280" alt="Фото Петра" width="280" height="280">
+            </a>
+            <blockquote class="post__description">
+              <p class="post__comment">Дорога на север</p>
+              <cite class="post__comment-author">Автор фото: Петр</cite>
+              <div class="post__like">
+                <button class="post__button-like" type="button">Нравится</button>
+                <span class="post__like-counter">96</span>
+              </div>
+            </blockquote>
+          </article>
+          <article class="photo-catalog__post post">
+            <a class="post__link" href="#">
+              <img class="post__photo" src="https://via.placeholder.com/280x280" alt="Фото Антона" width="280" height="280">
+            </a>
+            <blockquote class="post__description">
+              <p class="post__comment">Мост дьявола</p>
+              <cite class="post__comment-author">Автор фото: Антон</cite>
+              <div class="post__like">
+                <button class="post__button-like" type="button">Нравится</button>
+                <span class="post__like-counter">254</span>
+              </div>
+            </blockquote>
+          </article>
+        </section>
+        <section class="main__video-content video-content">
+          <h2 class="visually-hidden">Наш видеоконтент</h2>
+          <p class="video-content__lead">Все еще сомневаетесь?</p>
+          <p class="video-content__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <div class="video-content__content content">
+            <img class="content__video" src="https://via.placeholder.com/320x201" alt="Заглушка с кадром из нашего видео" width="320" height="201">
+            <div class="content__control control">
+              <input class="control__scale" type="range" name="scale">
+              <button class="control__replay" type="button">Посмотреть заново</button>
+              <div class="control__buttons">
+                <button class="control__subtitles">Субтитры</button>
+                <button class="control__fullscreen">Во весь экран</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <p class="main-footer__hashtag hashtag">#visitSEDONA</p>
+        <ul class="main-footer__socials socials">
+          <li class="socials__item socials__item--twitter">
+            <a class="socials__link socials__link--twitter" href="#">Читайте нас в Twitter</a>
+          </li>
+          <li class="socials__item socials__item--facebook">
+            <a class="socials__link socials__link--facebook" href="#">Читайте нас в Facebook</a>
+          </li>
+          <li class="socials__item ssocials__item--youtube">
+            <a class="socials__link socials__link--youtube" href="#">Смотрите нас на Youtube</a>
+          </li>
+        </ul>
+        <p class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано <span class="visually-hidden">в HTML Academy</span>
+            <img class="copyright__logo" src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy" width="27" height="34">
+          </a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
