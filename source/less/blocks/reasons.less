@@ -1,0 +1,44 @@
+.reasons {
+  text-align: center;
+}
+
+.reasons__text {
+  font-weight: normal;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+}
+
+.reasons__list {
+  .ulstyle;
+}
+
+.reasons__item {
+  &--detailed {
+    background-color: rgb(129, 179, 210);
+    color: rgb(255, 255, 255);
+  }
+
+  &--brief {
+    background-color: rgb(238, 238, 238);
+    color: rgb(0, 0, 0);
+  }
+}
+
+.reasons__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.reasons__number,
+.reasons__short-description {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.reasons__item--brief .reasons__number,
+.reasons__item--brief .reasons__short-description {
+  color: rgb(51, 51, 51);
+}
