@@ -7,6 +7,9 @@
   font-size: 14px;
   color: rgb(51, 51, 51);
   text-align: center;
+
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .reasons__list {
@@ -14,9 +17,12 @@
 }
 
 .reasons__item {
+  padding: 25px 0;
+
   &--detailed {
     background-color: rgb(129, 179, 210);
     color: rgb(255, 255, 255);
+    padding-bottom: 0;
   }
 
   &--brief {
@@ -29,10 +35,14 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
+
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.reasons__number,
-.reasons__short-description {
+.reasons__short-description,
+.reasons__number {
+  margin: 0;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
@@ -41,4 +51,19 @@
 .reasons__item--brief .reasons__number,
 .reasons__item--brief .reasons__short-description {
   color: rgb(51, 51, 51);
+}
+
+.reasons__number {
+  margin-bottom: 15px;
+}
+
+.reasons__short-description {
+  &--detailed {
+    margin-bottom: 35px;
+  }
+}
+
+.reasons__advantages {
+  .ulstyle;
+  padding: 35px 0;
 }
