@@ -5,14 +5,25 @@
 }
 
 .usernames__input {
-  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  padding-top: 18px;
-  padding-bottom: 14px;
-  padding-right: 22px;
-  padding-left: 22px;
-}
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-right: 18px;
+  padding-left: 18px;
 
+  &:hover {
+    border-color: rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+  }
+
+  &:focus {
+    border-color: rgb(229, 229, 229);
+    background-color: rgb(255, 255, 255);
+  }
+}
 
 .usernames__input:-ms-input-placeholder {
   font-size: 18px;
