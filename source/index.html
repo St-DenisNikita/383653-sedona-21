@@ -2,11 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
       <header class="main-header">
+        <a class="main-header__logo logo">
+          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
+        </a>
         <nav class="main-header__navigation main-navigation main-navigation--open main-navigation--close">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -24,23 +29,20 @@
           </ul>
         </nav>
         <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation">Открыть главное меню</button>
-        <a class="main-header__logo logo">
-          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
-        </a>
         <div class="main-header__intro">
           <img class="main-header__intro-image main-header__intro-image--main-page" src="https://via.placeholder.com/282x214" alt="Welcome to the gorgeaus Sedona, because the Grand Canyon sucks!" width="282" height="214">
         </div>
       </header>
-      <main class="main">
-        <h1 class="visually-hidden">Сайт города Седона</h1>
+      <main class="page-body__main main">
+        <h1 class="visually-hidden">Сайт городка Седона</h1>
         <p class="main__lead">Седона — небольшой  городок в Аризоне, заслуживающий большего!</p>
         <section class="main__reasons reasons">
           <p class="reasons__text">рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
           <ul class="reasons__list">
-            <li class="reasons__item reasons__item--picture">
+            <li class="reasons__item reasons__item--detailed">
               <h2 class="reasons__title">Настоящий городок</h2>
-              <span class="reasons__number">— №1 —</span>
-              <p class="reasons__short-description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              <p class="reasons__number">— №1 —</p>
+              <p class="reasons__short-description reasons__short-description--detailed">Седона не аттракцион для туристов, там течет своя жизнь</p>
               <img class="reasons__picture" src="https://via.placeholder.com/520x260" alt="Наш лучший мотель" width="520" height="260">
               <ul class="reasons__advantages advantages">
                 <li class="advantages__item">
@@ -57,52 +59,52 @@
                 </li>
               </ul>
             </li>
-            <li class="reasons__item reasons__item--picture">
+            <li class="reasons__item reasons__item--detailed">
               <h2 class="reasons__title">Там есть Мост Дьявола</h2>
-              <span class="reasons__number">— №2 —</span>
-              <p class="reasons__short-description">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
+              <p class="reasons__number">— №2 —</p>
+              <p class="reasons__short-description reasons__short-description--detailed">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
               <img class="reasons__picture" src="https://via.placeholder.com/520x260" alt="Главная достопремечательность Седоны - Мост Дьявола" width="520" height="260">
             </li>
-            <li class="reasons__item">
+            <li class="reasons__item reasons__item--brief">
               <h2 class="reasons__title">Небольшая площадь</h2>
-              <span class="reasons__number">— №3 —</span>
+              <p class="reasons__number">— №3 —</p>
               <p class="reasons__short-description">Все интересные места находятся очень близко</p>
             </li>
-            <li class="reasons__item">
+            <li class="reasons__item reasons__item--brief">
               <h2 class="reasons__title">Красивая дорога</h2>
-              <span class="reasons__number">— №4 —</span>
+              <p class="reasons__number">— №4 —</p>
               <p class="reasons__short-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="reasons__item">
+            <li class="reasons__item reasons__item--brief">
               <h2 class="reasons__title">Мало туристов</h2>
-              <span class="reasons__number">— №5 —</span>
+              <p class="reasons__number">— №5 —</p>
               <p class="reasons__short-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ul>
         </section>
         <section class="main__booking booking">
-          <h2>Бронирование отелей в Седоне</h2>
+          <h2 class="visually-hidden">Бронирование отелей в Седоне</h2>
           <p class="booking__lead">Заинтересовались?</p>
           <p class="booking__text">Укажите прежполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
           <a class="booking__button button" href="#">Найти гостиницу</a>
         </section>
         <section class="main__map map">
           <h2 class="visually-hidden">Карта городка Седона и окрестностей</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d161649.27452011354!2d-111.93131474106427!3d34.815061088053895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1605431094705!5m2!1sru!2suk" width="600" height="450"></iframe>
-          <img class="map__image" src="https://via.placeholder.com/282x214" alt="Карта городка Седона и окрестностей" width="282" height="214">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d161649.27452011354!2d-111.93131474106427!3d34.815061088053895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1605431094705!5m2!1sru!2suk" width="320" height="350"></iframe>
+          <img class="map__image" src="https://via.placeholder.com/320x350" alt="Карта городка Седона и окрестностей" width="320" height="350">
         </section>
       </main>
       <footer class="main-footer">
         <p class="main-footer__hashtag hashtag">#visitSEDONA</p>
         <ul class="main-footer__socials socials">
           <li class="socials__item socials__item--twitter">
-            <a class="socials__link socials__link--twitter" href="#">Читайте нас в Twitter</a>
+            <a class="socials__link socials__link--twitter" href="#"><span class="visually-hidden">Читайте нас в Twitter</span></a>
           </li>
           <li class="socials__item socials__item--facebook">
-            <a class="socials__link socials__link--facebook" href="#">Читайте нас в Facebook</a>
+            <a class="socials__link socials__link--facebook" href="#"><span class="visually-hidden">Читайте нас в Facebook</span></a>
           </li>
           <li class="socials__item ssocials__item--youtube">
-            <a class="socials__link socials__link--youtube" href="#">Смотрите нас на Youtube</a>
+            <a class="socials__link socials__link--youtube" href="#"><span class="visually-hidden">Смотрите нас на Youtube</span></a>
           </li>
         </ul>
         <p class="main-footer__copyright copyright">

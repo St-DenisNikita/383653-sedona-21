@@ -2,11 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
       <header class="main-header">
+        <a class="main-header__logo logo" href="index.html">
+          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип" width="102" height="84">
+        </a>
         <nav class="main-header__navigation main-navigation main-navigation--open main-navigation--close">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -24,20 +29,17 @@
           </ul>
         </nav>
         <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation">Открыть главное меню</button>
-        <a class="main-header__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип" width="102" height="84">
-        </a>
         <div class="main-header__intro">
           <img class="main-header__intro-image main-header__intro-image--inner-page" src="https://via.placeholder.com/229x39" alt="Sedona" width="229" height="39">
         </div>
       </header>
-      <main class="main">
+      <main class="page-body__main page-body__main--inner-page main">
         <h1 class="visually-hidden">Страница отправки формы</h1>
         <p class="main__lead">Оставьте свой отзыв</p>
         <p class="main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных Вами достопримечательностях</p>
         <form class="main__main-form main-form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="main-form__usernames usernames">
-            <legend class="usernames__legend">Представьтесь:</legend>
+          <fieldset class="main-form__fieldset usernames">
+            <legend class="main-form__legend usernames__legend">Представьтесь:</legend>
             <label class="usernames__label usernames__label--name" for="user-name">Имя*:</label>
             <input class="usernames__input usernames__input--name" type="text" name="username" id="user-name" placeholder="Петр" required>
             <label class="usernames__label usernames__label--surname" for="user-surname">Фамилия*:</label>
@@ -45,15 +47,15 @@
             <label class="usernames__label usernames__label--patronymic" for="user-patronymic">Отчество:</label>
             <input class="usernames__input usernames__input--patronymic" type="text" name="patronymic" id="user-patronymic" placeholder="Александрович">
           </fieldset>
-          <fieldset class="main-form__usercontacts contacts">
-            <legend class="contacts__legend">Контактная информация:</legend>
+          <fieldset class="main-form__fieldset contacts">
+            <legend class="main-form__legend contacts__legend">Контактная информация:</legend>
             <label class="contacts__label contacts__label--phone" for="user-phone">Контактный телефон*:</label>
             <input class="contacts__input contacts__input--phone" type="tel" name="phone" id="user-phone" placeholder="Введите телефон" required>
             <label class="contacts__label contacts__label--email" for="user-email">Электронная почта*:</label>
             <input class="contacts__input contacts__input-email" type="email" name="email" id="user-email" placeholder="Введите e-mail" required>
           </fieldset>
-          <fieldset class="main-form__impression impressions">
-            <legend class="impressions__legend">Ваше общее впечатление:</legend>
+          <fieldset class="main-form__fieldset impressions">
+            <legend class="main-form__legend impressions__legend">Ваше общее впечатление:</legend>
             <input class="impressions__input impressions__input--positive" type="radio" name="impression" value="positive" id="impression-positive" checked>
             <label class="impressions__label impressions__label--positive" for="impression-positive">Скорее положительное</label>
             <input class="impressions__input impressions__input--nagative" type="radio" name="impression" value="negative" id="impression-negative">
@@ -61,8 +63,8 @@
             <input class="impressions__input impressions__input--undefined" type="radio" name="impression" value="undefined" id="impression-undefined">
             <label class="impressions__label impressions__label--undefined" for="impression-undefined">Затрудняюсь ответить</label>
           </fieldset>
-          <fieldset class="main-form__sightseeing-checklist sightseeing-checklist">
-            <legend class="sightseeing-checklist__legend">Посещенные достопримечательности:</legend>
+          <fieldset class="main-form__fieldset sightseeing-checklist">
+            <legend class="main-form__legend sightseeing-checklist__legend">Посещенные достопримечательности:</legend>
             <input class="sightseeing-checklist__input" type="checkbox" name="devil-bridge-trail" id="sightseeing-devil-bridge" checked>
             <label class="sightseeing-checklist__label" for="sightseeing-devil-bridge">Мост Дьявола</label>
             <input class="sightseeing-checklist__input" type="checkbox" name="bell-rock" id="sightseeing-bell-rock" checked>
@@ -72,8 +74,8 @@
             <input class="sightseeing-checklist__input" type="checkbox" name="red-beds" id="sightseeing-red-beds">
             <label class="sightseeing-checklist__label" for="sightseeing-red-beds">Красные скалы</label>
           </fieldset>
-          <fieldset class="main-form__comment comment">
-            <legend class="comment__legend">Опишите свои эмоции:</legend>
+          <fieldset class="main-form__fieldset comment">
+            <legend class="main-form__legend comment__legend">Опишите свои эмоции:</legend>
             <textarea class="comment__body" name="comment" id="user-comment">
               Опишите подробно все свои восторги
             </textarea>
@@ -85,13 +87,13 @@
         <p class="main-footer__hashtag hashtag">#visitSEDONA</p>
         <ul class="main-footer__socials socials">
           <li class="socials__item socials__item--twitter">
-            <a class="socials__link socials__link--twitter" href="#">Читайте нас в Twitter</a>
+            <a class="socials__link socials__link--twitter" href="#"><span class="visually-hidden">Читайте нас в Twitter</span></a>
           </li>
           <li class="socials__item socials__item--facebook">
-            <a class="socials__link socials__link--facebook" href="#">Читайте нас в Facebook</a>
+            <a class="socials__link socials__link--facebook" href="#"><span class="visually-hidden">Читайте нас в Facebook</span></a>
           </li>
           <li class="socials__item ssocials__item--youtube">
-            <a class="socials__link socials__link--youtube" href="#">Смотрите нас на Youtube</a>
+            <a class="socials__link socials__link--youtube" href="#"><span class="visually-hidden">Смотрите нас на Youtube</span></a>
           </li>
         </ul>
         <p class="main-footer__copyright copyright">
@@ -102,4 +104,18 @@
       </footer>
     </div>
   </body>
+
+  <div class="popup popup--wrapper popup--error">
+    <h1 class="popup__title">что-то пошло не так!</h1>
+    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="popup__button popup__button--error button" type="button">ок</button>
+  </div>
+
+  <div class="popup popup--wrapper popup--sent">
+    <h1 class="popup__title">Ваш отзыв отправлен!</h1>
+    <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <div class="popup__inner">
+      <button class="popup__button popup__button--sent button" type="button">Закрыть окно</button>
+    </div>
+  </div>
 </html>
