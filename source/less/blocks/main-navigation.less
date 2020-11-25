@@ -1,5 +1,29 @@
+.main-navigation {
+  &--open {
+    display: block;
+  }
+
+  &--close {
+    display: none;
+  }
+}
+
 .main-navigation__list {
   .ulstyle;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.main-navigation__item {
+  @media (min-width: 768px) {
+    width: 19.92%;
+
+    &--margin {
+      margin-right: auto;
+    }
+  }
 }
 
 .main-navigation__link {
@@ -19,5 +43,34 @@
   &:active {
     background-color: rgb(84, 150, 189);
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: 768px) {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    padding-bottom: 14px;
+
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      color: rgb(129, 179, 210);
+    }
+
+    &:active {
+      background-color: rgb(255, 255, 255);
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &--active {
+      color: rgb(118, 99, 87);
+
+      &:hover {
+        color: rgb(96, 78, 67);
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
+    }
   }
 }

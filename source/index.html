@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0, minimum-scale=0.86">
     <title>HTML Academy: Седона</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
@@ -10,27 +10,29 @@
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
-      <header class="main-header">
-        <a class="main-header__logo logo">
-          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
-        </a>
-        <nav class="main-header__navigation main-navigation main-navigation--open main-navigation--close">
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a class="main-navigation__link">Главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="catalog.html">Фото и видео</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="https://htmlacademy.ru">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation">Открыть главное меню</button>
+      <header class="page-body__header main-header">
+        <div class="main-header__menu">
+          <a class="main-header__logo logo">
+            <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
+          </a>
+          <nav class="main-header__navigation main-navigation">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link main-navigation__link--active">Главная</a>
+              </li>
+              <li class="main-navigation__item main-navigation__item--margin">
+                <a class="main-navigation__link" href="catalog.html">Фото и видео</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="https://htmlacademy.ru">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation" aria-label="Кнопка-переключатель главного меню"></button>
+        </div>
         <div class="main-header__intro">
           <img class="main-header__intro-image main-header__intro-image--main-page" src="https://via.placeholder.com/282x214" alt="Welcome to the gorgeaus Sedona, because the Grand Canyon sucks!" width="282" height="214">
         </div>
@@ -42,10 +44,16 @@
           <p class="reasons__text">рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
           <ul class="reasons__list">
             <li class="reasons__item reasons__item--detailed">
-              <h2 class="reasons__title">Настоящий городок</h2>
-              <p class="reasons__number">— №1 —</p>
-              <p class="reasons__short-description reasons__short-description--detailed">Седона не аттракцион для туристов, там течет своя жизнь</p>
-              <img class="reasons__picture" src="https://via.placeholder.com/520x260" alt="Наш лучший мотель" width="520" height="260">
+              <div class="reasons__inner reasons__inner--left">
+                <h2 class="reasons__title">Настоящий городок</h2>
+                <p class="reasons__number">— №1 —</p>
+                <p class="reasons__short-description reasons__short-description--detailed">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <picture class="reasons__picture reasons__picture--right">
+                <source media="(min-width: 1200px)" srcset="../img/desktop-photo-city@1x.jpg">
+                <source media="(min-width: 768px)" srcset="../img/tablet-photo-city@1x.jpg">
+                <img class="reasons__image" src="../img/mobile-photo-city@1x.jpg" alt="Наш лучший мотель">
+              </picture>
               <ul class="reasons__advantages advantages">
                 <li class="advantages__item">
                   <h3 class="advantages__title">Жилье</h3>
@@ -62,10 +70,16 @@
               </ul>
             </li>
             <li class="reasons__item reasons__item--detailed">
-              <h2 class="reasons__title">Там есть Мост Дьявола</h2>
-              <p class="reasons__number">— №2 —</p>
-              <p class="reasons__short-description reasons__short-description--detailed">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
-              <img class="reasons__picture" src="https://via.placeholder.com/520x260" alt="Главная достопремечательность Седоны - Мост Дьявола" width="520" height="260">
+              <div class="reasons__inner reasons__inner--right">
+                <h2 class="reasons__title">Там есть Мост Дьявола</h2>
+                <p class="reasons__number">— №2 —</p>
+                <p class="reasons__short-description reasons__short-description--detailed">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
+              </div>
+              <picture class="reasons__picture reasons__picture--left">
+                <source media="(min-width: 1200px)" srcset="../img/desktop-photo-bridge@1x.jpg">
+                <source media="(min-width: 768px)" srcset="../img/tablet-photo-bridge@1x.jpg">
+                <img class="reasons__image" src="../img/mobile-photo-bridge@1x.jpg" alt="Главная достопремечательность Седоны - Мост Дьявола">
+              </picture>
             </li>
             <li class="reasons__item reasons__item--brief">
               <h2 class="reasons__title">Небольшая площадь</h2>
@@ -96,7 +110,7 @@
           <img class="map__image" src="https://via.placeholder.com/320x350" alt="Карта городка Седона и окрестностей" width="320" height="350">
         </section>
       </main>
-      <footer class="main-footer">
+      <footer class="main-footer main-footer__wrapper">
         <p class="main-footer__hashtag hashtag">#visitSEDONA</p>
         <ul class="main-footer__socials socials">
           <li class="socials__item socials__item--twitter">
@@ -110,7 +124,7 @@
           </li>
         </ul>
         <p class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано <span class="visually-hidden">в HTML Academy</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано<span class="visually-hidden">в HTML Academy</span>
             <img class="copyright__logo" src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy" width="27" height="34">
           </a>
         </p>

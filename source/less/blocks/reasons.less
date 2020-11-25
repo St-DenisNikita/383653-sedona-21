@@ -10,10 +10,19 @@
 
   margin: 0;
   margin-bottom: 28px;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    color: rgb(0, 0, 0);
+  }
 }
 
 .reasons__list {
   .ulstyle;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
 }
 
 .reasons__item {
@@ -23,11 +32,49 @@
     background-color: rgb(129, 179, 210);
     color: rgb(255, 255, 255);
     padding-bottom: 0;
+
+    @media (min-width: 768px) {
+      padding-top: 0;
+
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+
+      &:first-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      &:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    }
   }
 
   &--brief {
     background-color: rgb(238, 238, 238);
     color: rgb(0, 0, 0);
+  }
+}
+
+.reasons__inner {
+  @media (min-width: 768px) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    &--right {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+
+    &--left {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
 }
 
@@ -38,6 +85,38 @@
 
   margin: 0;
   margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+  }
+}
+
+.reasons__picture {
+  @media (min-width: 768px) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    &--right {
+      grid-column-start: 2;
+      grid-column-end: 4;
+
+      .reasons__image {
+        margin-left: auto;
+      }
+    }
+
+    &--left {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+}
+
+.reasons__image {
+  @media (max-width: 767px) {
+    transform: translateX(-50%);
+    margin: 0 50%;
+  }
 }
 
 .reasons__short-description,
@@ -66,4 +145,13 @@
 .reasons__advantages {
   .ulstyle;
   padding: 35px 0;
+
+  @media (min-width: 768px) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
 }

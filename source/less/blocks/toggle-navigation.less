@@ -1,0 +1,19 @@
+.toggle-navigation {
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  &--open {
+    background-color: rgb(255, 255, 255);
+    display: block;
+  }
+
+  &--close {
+    background-color: rgb(129, 179, 210);
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
