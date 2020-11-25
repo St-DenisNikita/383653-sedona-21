@@ -27,8 +27,14 @@
 }
 
 .booking__button {
+  min-width: 280px;
+  box-sizing: border-box;
   padding-top: 14px;
   padding-bottom: 17px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 768px) {
+    width: 458px;
+  }
 }
