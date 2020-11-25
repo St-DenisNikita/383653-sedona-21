@@ -10,29 +10,31 @@
   </head>
   <body class="page-body">
     <div class="page-body__wrapper">
-      <header class="main-header">
-        <a class="main-header__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип" width="102" height="84">
-        </a>
-        <nav class="main-header__navigation main-navigation main-navigation--open main-navigation--close">
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link">Фото и видео</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link" href="https://htmlacademy.ru">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation">Открыть главное меню</button>
+      <header class="page-body__header main-header">
+        <div class="main-header__menu">
+          <a class="main-header__logo logo">
+            <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
+          </a>
+          <nav class="main-header__navigation main-navigation">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="index.html">Главная</a>
+              </li>
+              <li class="main-navigation__item main-navigation__item--margin">
+                <a class="main-navigation__link main-navigation__link--active">Фото и видео</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="https://htmlacademy.ru">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="main-header__toggle-navigation toggle-navigation toggle-navigation--open toggle-navigation--close" type="button" name="toggle-navigation" aria-label="Кнопка-переключатель главного меню"></button>
+        </div>
         <div class="main-header__intro">
-          <img class="main-header__intro-image main-header__intro-image--inner-page" src="https://via.placeholder.com/229x39" alt="Sedona" width="229" height="39">
+          <img class="main-header__intro-image main-header__intro-image--main-page" src="https://via.placeholder.com/282x214" alt="Welcome to the gorgeaus Sedona, because the Grand Canyon sucks!" width="282" height="214">
         </div>
       </header>
       <main class="page-body__main page-body__main--inner-page main">
