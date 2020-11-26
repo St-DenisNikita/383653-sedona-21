@@ -44,39 +44,71 @@
         <form class="main__main-form main-form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="main-form__fieldset main-form__fieldset--usernames usernames">
             <legend class="main-form__legend usernames__legend">Представьтесь:</legend>
-            <label class="usernames__label usernames__label--name" for="user-name">Имя*:</label>
-            <input class="usernames__input usernames__input--name" type="text" name="username" id="user-name" placeholder="Петр" required>
-            <label class="usernames__label usernames__label--surname" for="user-surname">Фамилия*:</label>
-            <input class="usernames__input usernames__input--surname" type="text" name="surname" id="user-surname" placeholder="Иванов" required>
-            <label class="usernames__label usernames__label--patronymic" for="user-patronymic">Отчество:</label>
-            <input class="usernames__input usernames__input--patronymic" type="text" name="patronymic" id="user-patronymic" placeholder="Александрович">
+            <ul class="usernames__list">
+              <li class="usernames__item">
+                <label class="usernames__label usernames__label--name" for="user-name">Имя*:</label>
+                <input class="usernames__input usernames__input--name" type="text" name="username" id="user-name" placeholder="Петр" required>
+              </li>
+              <li class="usernames__item">
+                <label class="usernames__label usernames__label--surname" for="user-surname">Фамилия*:</label>
+                <input class="usernames__input usernames__input--surname" type="text" name="surname" id="user-surname" placeholder="Иванов" required>
+              </li>
+              <li class="usernames__item">
+                <label class="usernames__label usernames__label--patronymic" for="user-patronymic">Отчество:</label>
+                <input class="usernames__input usernames__input--patronymic" type="text" name="patronymic" id="user-patronymic" placeholder="Александрович">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="main-form__fieldset main-form__fieldset--contact contacts">
             <legend class="main-form__legend contacts__legend">Контактная информация:</legend>
-            <label class="contacts__label contacts__label--phone" for="user-phone">Контактный телефон*:</label>
-            <input class="contacts__input contacts__input--phone" type="tel" name="phone" id="user-phone" placeholder="Введите телефон" required>
-            <label class="contacts__label contacts__label--email" for="user-email">Электронная почта*:</label>
-            <input class="contacts__input contacts__input-email" type="email" name="email" id="user-email" placeholder="Введите e-mail" required>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <label class="contacts__label contacts__label--phone" for="user-phone">Контактный телефон*:</label>
+                <input class="contacts__input contacts__input--phone" type="tel" name="phone" id="user-phone" placeholder="Введите телефон" required>
+              </li>
+              <li class="contacts__item">
+                <label class="contacts__label contacts__label--email" for="user-email">Электронная почта*:</label>
+                <input class="contacts__input contacts__input-email" type="email" name="email" id="user-email" placeholder="Введите e-mail" required>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="main-form__fieldset main-form__fieldset--impressions impressions">
             <legend class="main-form__legend impressions__legend">Ваше общее впечатление:</legend>
-            <input class="impressions__input impressions__input--positive" type="radio" name="impression" value="positive" id="impression-positive" checked>
-            <label class="impressions__label impressions__label--positive" for="impression-positive">Скорее положительное</label>
-            <input class="impressions__input impressions__input--nagative" type="radio" name="impression" value="negative" id="impression-negative">
-            <label class="impressions__label impressions__label--negative" for="impression-negative">Скорее отрицательное</label>
-            <input class="impressions__input impressions__input--undefined" type="radio" name="impression" value="undefined" id="impression-undefined">
-            <label class="impressions__label impressions__label--undefined" for="impression-undefined">Затрудняюсь ответить</label>
+            <ul class="impressions__list">
+              <li class="impressions__item">
+                <input class="impressions__input impressions__input--positive" type="radio" name="impression" value="positive" id="impression-positive" checked>
+                <label class="impressions__label impressions__label--positive" for="impression-positive">Скорее положительное</label>
+              </li>
+              <li class="impressions__item">
+                <input class="impressions__input impressions__input--nagative" type="radio" name="impression" value="negative" id="impression-negative">
+                <label class="impressions__label impressions__label--negative" for="impression-negative">Скорее отрицательное</label>
+              </li>
+              <li class="impressions__item">
+                <input class="impressions__input impressions__input--undefined" type="radio" name="impression" value="undefined" id="impression-undefined">
+                <label class="impressions__label impressions__label--undefined" for="impression-undefined">Затрудняюсь ответить</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="main-form__fieldset main-form__fieldset--sightseeing-checklist sightseeing-checklist">
             <legend class="main-form__legend sightseeing-checklist__legend">Посещенные достопримечательности:</legend>
-            <input class="sightseeing-checklist__input" type="checkbox" name="devil-bridge-trail" id="sightseeing-devil-bridge" checked>
-            <label class="sightseeing-checklist__label" for="sightseeing-devil-bridge">Мост Дьявола</label>
-            <input class="sightseeing-checklist__input" type="checkbox" name="bell-rock" id="sightseeing-bell-rock" checked>
-            <label class="sightseeing-checklist__label" for="sightseeing-bell-rock">Гора-Колокол</label>
-            <input class="sightseeing-checklist__input" type="checkbox" name="slide-rock-state-park" id="sightseeing-state-park" checked>
-            <label class="sightseeing-checklist__label" for="sightseeing-state-park">Слайд-парк</label>
-            <input class="sightseeing-checklist__input" type="checkbox" name="red-beds" id="sightseeing-red-beds">
-            <label class="sightseeing-checklist__label" for="sightseeing-red-beds">Красные скалы</label>
+            <ul class="sightseeing-checklist__list">
+              <li class="sightseeing-checklist__item">
+                <input class="sightseeing-checklist__input" type="checkbox" name="devil-bridge-trail" id="sightseeing-devil-bridge" checked>
+                <label class="sightseeing-checklist__label" for="sightseeing-devil-bridge">Мост Дьявола</label>
+              </li>
+              <li class="sightseeing-checklist__item">
+                <input class="sightseeing-checklist__input" type="checkbox" name="bell-rock" id="sightseeing-bell-rock" checked>
+                <label class="sightseeing-checklist__label" for="sightseeing-bell-rock">Гора-Колокол</label>
+              </li>
+              <li class="sightseeing-checklist__item">
+                <input class="sightseeing-checklist__input" type="checkbox" name="slide-rock-state-park" id="sightseeing-state-park" checked>
+                <label class="sightseeing-checklist__label" for="sightseeing-state-park">Слайд-парк</label>
+              </li>
+              <li class="sightseeing-checklist__item">
+                <input class="sightseeing-checklist__input" type="checkbox" name="red-beds" id="sightseeing-red-beds">
+                <label class="sightseeing-checklist__label" for="sightseeing-red-beds">Красные скалы</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="main-form__fieldset main-form__fieldset--comment comment">
             <legend class="main-form__legend comment__legend">Опишите свои эмоции:</legend>
