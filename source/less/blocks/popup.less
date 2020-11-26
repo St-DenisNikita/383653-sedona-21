@@ -6,6 +6,14 @@
   background-color: rgb(255, 255, 255);
 
   width: 320px;
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 640px;
+  }
 }
 
 .popup--error,
@@ -23,6 +31,10 @@
   margin-bottom: 26px;
   font-weight: bold;
   font-size: 18px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .popup__text {
