@@ -3,6 +3,55 @@
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  &--usernames {
+    @media (min-width: 768px) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  &--contact {
+    @media (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+
+  &--impressions {
+    @media (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  &--sightseeing-checklist {
+    @media (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  }
+
+  &--comment {
+    @media (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+  }
 }
 
 .main-form__legend {
@@ -16,9 +65,27 @@
   color: rgb(0, 0, 0);
 }
 
+.main-form__inner {
+  @media (min-width: 768px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
 .main-form__submit {
   padding-top: 18px;
   padding-bottom: 13px;
   padding-left: 32px;
   padding-right: 33px;
+}
+
+.main-form__clarification {
+  display: none;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 }

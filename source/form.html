@@ -42,7 +42,7 @@
         <p class="main__lead">Оставьте свой отзыв</p>
         <p class="main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных Вами достопримечательностях</p>
         <form class="main__main-form main-form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="main-form__fieldset usernames">
+          <fieldset class="main-form__fieldset main-form__fieldset--usernames usernames">
             <legend class="main-form__legend usernames__legend">Представьтесь:</legend>
             <label class="usernames__label usernames__label--name" for="user-name">Имя*:</label>
             <input class="usernames__input usernames__input--name" type="text" name="username" id="user-name" placeholder="Петр" required>
@@ -51,14 +51,14 @@
             <label class="usernames__label usernames__label--patronymic" for="user-patronymic">Отчество:</label>
             <input class="usernames__input usernames__input--patronymic" type="text" name="patronymic" id="user-patronymic" placeholder="Александрович">
           </fieldset>
-          <fieldset class="main-form__fieldset contacts">
+          <fieldset class="main-form__fieldset main-form__fieldset--contact contacts">
             <legend class="main-form__legend contacts__legend">Контактная информация:</legend>
             <label class="contacts__label contacts__label--phone" for="user-phone">Контактный телефон*:</label>
             <input class="contacts__input contacts__input--phone" type="tel" name="phone" id="user-phone" placeholder="Введите телефон" required>
             <label class="contacts__label contacts__label--email" for="user-email">Электронная почта*:</label>
             <input class="contacts__input contacts__input-email" type="email" name="email" id="user-email" placeholder="Введите e-mail" required>
           </fieldset>
-          <fieldset class="main-form__fieldset impressions">
+          <fieldset class="main-form__fieldset main-form__fieldset--impressions impressions">
             <legend class="main-form__legend impressions__legend">Ваше общее впечатление:</legend>
             <input class="impressions__input impressions__input--positive" type="radio" name="impression" value="positive" id="impression-positive" checked>
             <label class="impressions__label impressions__label--positive" for="impression-positive">Скорее положительное</label>
@@ -67,7 +67,7 @@
             <input class="impressions__input impressions__input--undefined" type="radio" name="impression" value="undefined" id="impression-undefined">
             <label class="impressions__label impressions__label--undefined" for="impression-undefined">Затрудняюсь ответить</label>
           </fieldset>
-          <fieldset class="main-form__fieldset sightseeing-checklist">
+          <fieldset class="main-form__fieldset main-form__fieldset--sightseeing-checklist sightseeing-checklist">
             <legend class="main-form__legend sightseeing-checklist__legend">Посещенные достопримечательности:</legend>
             <input class="sightseeing-checklist__input" type="checkbox" name="devil-bridge-trail" id="sightseeing-devil-bridge" checked>
             <label class="sightseeing-checklist__label" for="sightseeing-devil-bridge">Мост Дьявола</label>
@@ -78,13 +78,16 @@
             <input class="sightseeing-checklist__input" type="checkbox" name="red-beds" id="sightseeing-red-beds">
             <label class="sightseeing-checklist__label" for="sightseeing-red-beds">Красные скалы</label>
           </fieldset>
-          <fieldset class="main-form__fieldset comment">
+          <fieldset class="main-form__fieldset main-form__fieldset--comment comment">
             <legend class="main-form__legend comment__legend">Опишите свои эмоции:</legend>
             <textarea class="comment__body" name="comment" id="user-comment">
               Опишите подробно все свои восторги
             </textarea>
           </fieldset>
-          <button class="main-form__submit button" type="submit">отправить отзыв</button>
+          <div class="main-form__inner">
+            <button class="main-form__submit button" type="submit">отправить отзыв</button>
+            <p class="main-form__clarification">* — обязательные поля</p>
+          </div>
         </form>
       </main>
       <footer class="main-footer main-footer__wrapper">
