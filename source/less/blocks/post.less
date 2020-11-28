@@ -8,6 +8,23 @@
 
 .post__description {
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 21px;
+    position: absolute;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .post__comment {
@@ -16,6 +33,11 @@
   font-size: 14px;
   font-weight: bold;
   color: rgb(0, 0, 0);
+
+  @media (min-width: 768px) {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .post__comment-author {
@@ -27,6 +49,10 @@
   font-style: normal;
   margin-top: 0;
   margin-bottom: 13px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .post__like-counter {
