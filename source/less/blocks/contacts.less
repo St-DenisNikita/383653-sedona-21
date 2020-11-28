@@ -1,3 +1,21 @@
+.contacts__list {
+  .ulstyle;
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
 .contacts__label {
   font-weight: normal;
   font-size: 14px;

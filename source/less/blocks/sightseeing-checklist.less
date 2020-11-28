@@ -1,3 +1,22 @@
+.sightseeing-checklist__list {
+  .ulstyle;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
+
+.sightseeing-checklist__item {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    width: 50%; //временно
+  }
+}
+
 .sightseeing-checklist__label {
   font-weight: bold;
   font-size: 18px;
