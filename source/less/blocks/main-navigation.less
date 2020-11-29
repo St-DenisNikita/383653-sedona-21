@@ -28,13 +28,17 @@
 
 .main-navigation__link {
   display: block;
-  padding: 16px 0;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   background-color: rgb(129, 179, 210);
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+  line-height: 1.5;
 
   &:hover {
     background-color: rgb(102, 158, 192);
@@ -46,6 +50,7 @@
   }
 
   @media (min-width: 768px) {
+    border: none;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-size: 14px;

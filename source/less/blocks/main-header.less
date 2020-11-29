@@ -37,11 +37,15 @@
 .main-header__intro {
   min-height: 389px;
   margin: 0 -18px;
-  margin-top: -28px;
+  margin-top: -29px;
   background-color: rgb(226, 240, 249);
-  background-image: url("../img/back-desktop.jpg");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 0;
+
+  @media (min-width: 768px) {
+    background-image: url("../img/back-desktop.jpg");
+  }
 }
 
 .main-header__intro-image {
