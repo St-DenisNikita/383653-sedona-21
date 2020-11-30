@@ -7,9 +7,11 @@
   font-size: 14px;
   color: rgb(51, 51, 51);
   text-align: center;
+  padding: 0 20px;
+  line-height: 1.9;
 
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   @media (min-width: 768px) and (max-width: 1199px) {
     color: rgb(0, 0, 0);
@@ -18,6 +20,9 @@
 
 .reasons__list {
   .ulstyle;
+  padding-top: 20px;
+
+  background-color: rgb(129, 179, 210);
 
   @media (min-width: 768px) {
     display: grid;
@@ -26,15 +31,15 @@
 }
 
 .reasons__item {
-  padding: 25px 0;
+  padding: 25px 18px;
 
   &--detailed {
-    background-color: rgb(129, 179, 210);
+    padding-top: 39px;
     color: rgb(255, 255, 255);
     padding-bottom: 0;
 
     @media (min-width: 768px) {
-      padding-top: 0;
+      padding: 0;
 
       display: grid;
       grid-template-columns: 33.33% 33.33% 33.33%;
@@ -65,6 +70,7 @@
   @media (min-width: 768px) {
     grid-row-start: 1;
     grid-row-end: 2;
+    padding: 0 32px;
 
     &--right {
       grid-column-start: 3;
@@ -84,7 +90,7 @@
   line-height: 1;
 
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 
   @media (min-width: 768px) {
     font-size: 21px;
@@ -133,12 +139,14 @@
 }
 
 .reasons__number {
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
 .reasons__short-description {
+  line-height: 1.5;
   &--detailed {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+    letter-spacing: -0.2px;
   }
 }
 

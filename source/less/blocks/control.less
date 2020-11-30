@@ -4,6 +4,10 @@
 
 .control__buttons {
   background-color: rgb(242, 242, 242);
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .control__scale,
@@ -11,4 +15,10 @@
 .control__subtitles,
 .control__fullscreen {
   cursor: pointer;
+}
+
+.control__replay {
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
 }
