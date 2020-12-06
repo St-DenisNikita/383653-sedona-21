@@ -20,7 +20,7 @@
 
 .reasons__list {
   .ulstyle;
-  padding-top: 20px;
+  padding-top: 16px;
 
   background-color: rgb(129, 179, 210);
 
@@ -31,10 +31,12 @@
 }
 
 .reasons__item {
-  padding: 25px 18px;
+  padding: 30px 18px;
+  padding-top: 30px;
+  padding-bottom: 22px;
 
   &--detailed {
-    padding-top: 39px;
+    padding-top: 43px;
     color: rgb(255, 255, 255);
     padding-bottom: 0;
 
@@ -97,6 +99,11 @@
   }
 }
 
+.reasons__item--brief .reasons__short-description {
+  width: 250px;
+  margin: 0 auto;
+}
+
 .reasons__picture {
   @media (min-width: 768px) {
     grid-row-start: 1;
@@ -146,7 +153,7 @@
   line-height: 1.5;
 
   &--detailed {
-    margin-bottom: 30px;
+    margin-bottom: 36.5px;
     letter-spacing: -0.2px;
   }
 }
