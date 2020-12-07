@@ -15,6 +15,11 @@
     padding-right: 19px;
     padding-bottom: 60px;
   }
+
+  @media (min-width: 1200px) {
+    padding-top: 160px;
+    padding-bottom: 81px;
+  }
 }
 
 .advantages__item {
@@ -34,6 +39,16 @@
       grid-column-end: 3;
       grid-row-start: 1;
       grid-row-end: 2;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &:first-child {
+      padding: 0 50px;
+    }
+
+    &&:nth-child(2) {
+      padding: 0 65px;
     }
   }
 }
@@ -68,4 +83,10 @@
   color: rgb(51, 51, 51);
 
   margin: 0;
+}
+
+.advantages__item:nth-child(2) .advantages__description {
+  @media (min-width: 1200px) {
+    white-space: pre-line;
+  }
 }
