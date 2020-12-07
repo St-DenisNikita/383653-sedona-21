@@ -8,11 +8,33 @@
   padding-left: 24%;
   padding-top: 40px;
   text-align: left;
+
+  @media (min-width: 768px) {
+    padding-top: 159px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 60px;
+  }
 }
 
 .advantages__item {
   @media (min-width: 768px) {
     padding: 0 36px;
+    text-align: center;
+
+    &:nth-child(2) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      padding: 0 30px;
+    }
+
+    &:last-child {
+      padding: 0 50px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
   }
 }
 
@@ -35,6 +57,7 @@
 
   @media (min-width: 768px) {
     font-size: 21px;
+    margin-bottom: 26px;
   }
 }
 
