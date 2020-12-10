@@ -1,19 +1,62 @@
 .toggle-navigation {
   border: none;
   cursor: pointer;
-  display: none;
+
+  &:focus {
+    outline: none;
+  }
 
   &--open {
     background-color: rgb(255, 255, 255);
-    display: block;
+    display: none;
+    min-width: 23px;
+    min-height: 22px;
   }
 
   &--close {
     background-color: rgb(129, 179, 210);
     display: block;
+    min-width: 23px;
+    min-height: 23px;
   }
 
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.toggle-navigation__icon {
+  display: block;
+
+  &--close {
+    display: block;
+  }
+
+  &--open {
+    display: none;
+  }
+}
+
+.toggle-navigation .toggle-navigation__icon--close {
+  color: rgb(255, 255, 255);
+}
+
+.toggle-navigation:hover .toggle-navigation__icon--close {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.toggle-navigation:active .toggle-navigation__icon--close {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.toggle-navigation .toggle-navigation__icon--open {
+  color: rgb(129, 179, 210);
+}
+
+.toggle-navigation:hover .toggle-navigation__icon--open {
+  color: rgba(129, 179, 210, 0.6);
+}
+
+.toggle-navigation:active .toggle-navigation__icon--open {
+  color: rgba(129, 179, 210, 0.3);
 }

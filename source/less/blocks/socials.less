@@ -10,11 +10,22 @@
 
 .socials__link {
   display: inline-block;
+  box-sizing: border-box;
   background-color: rgb(129, 179, 210);
-  padding: 24px 23px;
+  min-width: 46px;
+  min-height: 48px;
+
+  &--twitter {
+    padding-top: 15px;
+  }
 
   &--facebook {
-    padding-right: 24px;
+    min-width: 47px;
+    padding-top: 13px;
+  }
+
+  &--youtube {
+    padding-top: 15px;
   }
 
   &:hover {
@@ -24,4 +35,12 @@
   &:active {
     background-color: rgb(84, 150, 189);
   }
+}
+
+.socials__logo {
+  color: rgb(255, 255, 255);
+}
+
+.socials__link:active .socials__logo {
+  color: rgba(255, 255, 255, 0.3);
 }
