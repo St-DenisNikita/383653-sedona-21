@@ -35,15 +35,11 @@
   @media (min-width: 768px) {
     padding-top: 0;
     display: grid;
-    grid-template-columns: 33.33% 33.35% 33.33%;
+    grid-template-columns: 33.35% 33.35% 33.33%;
   }
 }
 
 .reasons__item {
-  padding: 30px 18px;
-  padding-top: 30px;
-  padding-bottom: 22px;
-
   &--detailed {
     padding-top: 43px;
     color: rgb(255, 255, 255);
@@ -72,6 +68,10 @@
   }
 
   &--brief {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 23px;
     background-color: rgb(238, 238, 238);
     color: rgb(0, 0, 0);
     position: relative;
@@ -90,11 +90,12 @@
       content: "";
       display: block;
       position: absolute;
+      z-index: 1;
 
       height: 1px;
-      width: 88.75%;
       bottom: 0;
-      left: 5.625%;
+      left: 18px;
+      right: 18px;
       background-color: rgb(214, 214, 214);
 
       @media (min-width: 768px) {
@@ -199,6 +200,11 @@
 }
 
 .reasons__image {
+  @media (min-width: 520px) {
+    width: 100%;
+    height: auto;
+  }
+
   @media (max-width: 767px) {
     transform: translateX(-50%);
     margin: 0 50%;
