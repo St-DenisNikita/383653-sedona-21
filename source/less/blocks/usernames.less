@@ -4,12 +4,29 @@
 
 .usernames__item {
   display: flex;
+  align-items: baseline;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .usernames__label {
   font-weight: normal;
   font-size: 14px;
   color: rgb(51, 51, 51);
+
+  &--name {
+    margin-right: 13px;
+  }
+
+  &--surname {
+    margin-right: 14px;
+  }
+
+  &--patronymic {
+    margin-right: 17px;
+  }
 }
 
 .usernames__input {
@@ -18,8 +35,8 @@
   cursor: pointer;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  padding-top: 14px;
-  padding-bottom: 10px;
+  padding-top: 17px;
+  padding-bottom: 12px;
   padding-right: 18px;
   padding-left: 18px;
   font-size: 18px;
@@ -37,6 +54,7 @@
 
 .usernames__input:-ms-input-placeholder {
   font-size: 18px;
+  letter-spacing: -1.8px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
@@ -44,6 +62,7 @@
 
 .usernames__input::-webkit-input-placeholder {
   font-size: 18px;
+  letter-spacing: -1.8px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
@@ -51,6 +70,7 @@
 
 .usernames__input:-moz-placeholder {
   font-size: 18px;
+  letter-spacing: -1.8px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
@@ -58,6 +78,7 @@
 
 .usernames__input::-moz-placeholder {
   font-size: 18px;
+  letter-spacing: -1.8px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
