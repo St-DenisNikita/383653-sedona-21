@@ -2,6 +2,33 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    opacity: 0.5;
+    /* Mobile layout by default */
+    background-image: url( "img/320.png" );
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url( "img/768.png" );
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1200px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/1200.png" );
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0, minimum-scale=0.86">
     <title>HTML Academy: Седона</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
