@@ -1,8 +1,23 @@
 .main-form__fieldset {
   border: none;
+  display: block;
+  position: relative;
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
+  padding-top: 21px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: auto;
+    background-color: rgb(229, 229, 229);
+    left: -20px;
+    right: -20px;
+    top: -2px;
+  }
 
   @media (min-width: 768px) {
     margin-bottom: 0;

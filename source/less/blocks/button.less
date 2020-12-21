@@ -10,6 +10,7 @@
   font-weight: bold;
   font-size: 21px;
   text-transform: uppercase;
+  line-height: 25px;
 
   &:hover {
     background-color: rgb(102, 158, 192);
@@ -22,5 +23,9 @@
 
   &:disabled {
     background-color: rgb(229, 229, 229);
+  }
+
+  @media (min-width: 768px) {
+    line-height: 27px;
   }
 }

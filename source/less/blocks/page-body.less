@@ -1,11 +1,18 @@
+.page-body {
+  background-color: rgb(242, 242, 242);
+}
+
 .page-body__wrapper {
   min-width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
   overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -5px 0 15px 0 rgba(0, 0, 0, 0.2),
+    5px 0 15px 0 rgba(0, 0, 0, 0.2);
 
   @media (min-width: 768px) {
-    width: 768px;
+    min-width: 768px;
   }
 
   @media (min-width: 1200px) {
@@ -20,19 +27,36 @@
 }
 
 .page-body__main {
-  padding-top: 33px;
+  padding-top: 32px;
+
+  &--inner-page {
+    padding-top: 35px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 53px;
+  }
 }
 
 .page-body__footer {
-  padding: 0 18px;
+  padding: 0 20px;
+  padding-top: 39px;
+  padding-bottom: 23px;
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     padding: 0 60px;
+    padding-top: 36px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: 1200px) {
-    padding: 0 120px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
