@@ -1,5 +1,7 @@
 .contacts__list {
   .ulstyle;
+  padding-top: 45px;
+  width: 100%;
 
   @media (min-width: 1200px) {
     display: flex;
@@ -10,9 +12,26 @@
 .contacts__item {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
 
   @media (min-width: 1200px) {
+    padding-top: 26px;
     flex-direction: row;
+    width: 50%;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -20,18 +39,86 @@
   font-weight: normal;
   font-size: 14px;
   color: rgb(51, 51, 51);
+  padding-left: 21px;
+  position: relative;
+
+  &--phone {
+    margin-bottom: 9px;
+  }
+
+  &--email {
+    margin-bottom: 6px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    min-width: 58px;
+    min-height: 58px;
+    background-color: rgb(230, 230, 230);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    right: 0;
+  }
+
+  &--phone::before {
+    bottom: -67px;
+    background-image: url("../img/phone.svg");
+  }
+
+  &--email::before {
+    bottom: -64px;
+    background-image: url("../img/mail.svg");
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 0;
+    align-self: center;
+    margin-top: 3px;
+    margin-bottom: 0;
+
+    &--phone {
+      margin-right: 16px;
+    }
+
+    &--email {
+      margin-right: 18px;
+    }
+
+    &::before {
+      bottom: -14px;
+    }
+
+    &--phone::before {
+      right: -331px;
+    }
+
+    &--email::before {
+      right: -334px;
+    }
+  }
+}
+
+.contacts__text {
+  @media (min-width: 1200px) {
+    display: none;
+  }
 }
 
 .contacts__input {
+  min-width: 1px;
+  width: 100%;
   box-sizing: border-box;
   cursor: pointer;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  padding-top: 14px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 9px;
   padding-right: 18px;
   padding-left: 18px;
   font-size: 18px;
+  line-height: 26px;
 
   &:hover {
     border-color: rgb(229, 229, 229);
@@ -41,6 +128,20 @@
   &:focus {
     border-color: rgb(229, 229, 229);
     background-color: rgb(255, 255, 255);
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 54px;
+  }
+
+  @media (min-width: 1200px) {
+    &--phone {
+      width: 65.625%;
+    }
+
+    &--email {
+      width: 65.77%;
+    }
   }
 }
 

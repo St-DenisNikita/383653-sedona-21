@@ -1,10 +1,24 @@
+.usernames__legend {
+  @media (min-width: 768px) {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
 .usernames__list {
   .ulstyle;
+  padding-top: 45px;
+
+  @media (min-width: 768px) {
+    padding-top: 80px;
+    width: 100%;
+  }
 }
 
 .usernames__item {
   display: flex;
   align-items: baseline;
+  width: 100%;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -15,31 +29,35 @@
   font-weight: normal;
   font-size: 14px;
   color: rgb(51, 51, 51);
+  padding-top: 3px;
+  align-self: center;
 
   &--name {
-    margin-right: 13px;
-  }
-
-  &--surname {
     margin-right: 14px;
   }
 
+  &--surname {
+    margin-right: 15px;
+  }
+
   &--patronymic {
-    margin-right: 17px;
+    margin-right: 18px;
   }
 }
 
 .usernames__input {
+  min-width: 1px;
   width: 100%;
   box-sizing: border-box;
   cursor: pointer;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  padding-top: 17px;
-  padding-bottom: 12px;
+  padding-top: 15px;
+  padding-bottom: 9px;
   padding-right: 18px;
   padding-left: 18px;
   font-size: 18px;
+  line-height: 26px;
 
   &:hover {
     border-color: rgb(229, 229, 229);
@@ -54,7 +72,7 @@
 
 .usernames__input:-ms-input-placeholder {
   font-size: 18px;
-  letter-spacing: -1.8px;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
@@ -62,7 +80,7 @@
 
 .usernames__input::-webkit-input-placeholder {
   font-size: 18px;
-  letter-spacing: -1.8px;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
@@ -70,7 +88,7 @@
 
 .usernames__input:-moz-placeholder {
   font-size: 18px;
-  letter-spacing: -1.8px;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
@@ -78,7 +96,7 @@
 
 .usernames__input::-moz-placeholder {
   font-size: 18px;
-  letter-spacing: -1.8px;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 1;
