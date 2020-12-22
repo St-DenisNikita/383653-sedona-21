@@ -1,10 +1,90 @@
+.impressions__legend {
+  @media (min-width: 768px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+  }
+}
+
 .impressions__list {
   .ulstyle;
+  padding-top: 64px;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding-top: 99px;
+    width: 100%;
+  }
+}
+
+.impressions__item:not(:last-child) {
+  margin-bottom: 43px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 52px;
+  }
+}
+
+.impressions__input + .impressions__label {
+  position: relative;
+  cursor: pointer;
+  margin-left: 79px;
+
+  @media (min-width: 768px) {
+    margin-left: 75px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 79px;
+  }
 }
 
 .impressions__label {
+  cursor: pointer;
   font-weight: bold;
   font-size: 18px;
   color: rgb(0, 0, 0);
   text-transform: none;
+  line-height: 26px;
+  display: block;
+  width: max-content;
+}
+
+.impressions__input + .impressions__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -17px;
+  left: -79px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgb(242, 242, 242);
+
+  @media (min-width: 768px) {
+    left: -75px;
+  }
+}
+
+.impressions__input + .impressions__label::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -62px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+
+  @media (min-width: 768px) {
+    left: -58px;
+  }
+}
+
+.impressions__input:checked + .impressions__label::after {
+  display: block;
 }

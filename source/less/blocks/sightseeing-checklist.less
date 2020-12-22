@@ -1,25 +1,120 @@
+.sightseeing-checklist__legend {
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sightseeing-checklist__legend-phrase {
+  width: 280px;
+  display: inline-block;
+}
+
 .sightseeing-checklist__list {
   .ulstyle;
+  box-sizing: border-box;
+  padding-top: 89px;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
+    min-height: 236px;
     display: flex;
     flex-wrap: wrap;
+    width: 70.99%;
+    justify-content: space-between;
+    margin-left: calc(14.5% + 2px);
+    margin-right: auto;
+    padding-top: 60px;
   }
 
   @media (min-width: 1200px) {
-    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-height: auto;
   }
 }
 
 .sightseeing-checklist__item {
-  @media (min-width: 768px) and (max-width: 1199px) {
-    width: 50%; //временно
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 43.696%;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+    width: 21.35%;
+
+    &:first-child {
+      width: 26.97%;
+    }
+
+    &:nth-child(2) {
+      width: 26.875%;
+    }
+
+    &:nth-child(3) {
+      width: 24.79%;
+    }
+
+    &:last-child {
+      width: 21.35%;
+    }
   }
 }
 
 .sightseeing-checklist__label {
+  cursor: pointer;
+  display: block;
   font-weight: bold;
   font-size: 18px;
+  line-height: 26px;
   color: rgb(0, 0, 0);
   text-transform: none;
+  width: max-content;
+}
+
+.sightseeing-checklist__input + .sightseeing-checklist__label {
+  position: relative;
+  cursor: pointer;
+  margin-left: 79px;
+
+  @media (min-width: 1200px) {
+    margin-left: 80px;
+  }
+}
+
+.sightseeing-checklist__input + .sightseeing-checklist__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -17px;
+  left: -80px;
+  width: 56px;
+  height: 56px;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242);
+}
+
+.sightseeing-checklist__input + .sightseeing-checklist__label::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -62px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+}
+
+.sightseeing-checklist__input:checked + .sightseeing-checklist__label::after {
+  display: block;
 }
