@@ -69,6 +69,14 @@
   }
 }
 
+.impressions__input + .impressions__label:hover::before {
+  background-color: rgb(229, 229, 229);
+}
+
+.impressions__input + .impressions__label:active::before {
+  background-color: rgb(213, 213, 213);
+}
+
 .impressions__input + .impressions__label::after {
   content: "";
   display: none;
@@ -83,6 +91,10 @@
   @media (min-width: 768px) {
     left: -58px;
   }
+}
+
+.impressions__input + .impressions__label:active::after {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .impressions__input:checked + .impressions__label::after {

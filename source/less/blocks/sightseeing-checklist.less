@@ -102,6 +102,14 @@
   background-color: rgb(242, 242, 242);
 }
 
+.sightseeing-checklist__input + .sightseeing-checklist__label:hover::before {
+  background-color: rgb(229, 229, 229);
+}
+
+.sightseeing-checklist__input + .sightseeing-checklist__label:active::before {
+  background-color: rgb(213, 213, 213);
+}
+
 .sightseeing-checklist__input + .sightseeing-checklist__label::after {
   content: "";
   display: none;
@@ -113,6 +121,10 @@
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: 50% 45%;
+}
+
+.sightseeing-checklist__input + .sightseeing-checklist__label:active::after {
+  opacity: 0.3;
 }
 
 .sightseeing-checklist__input:checked + .sightseeing-checklist__label::after {
