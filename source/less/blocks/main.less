@@ -15,10 +15,20 @@
     line-height: 1.3;
     width: 520px;
     margin-bottom: 30px;
+
+    &--inner-page {
+      font-size: 30px;
+      line-height: 26px;
+      margin-bottom: 32px;
+    }
   }
 
   @media (min-width: 1200px) {
     padding: 0 120px;
+
+    &--inner-page {
+      margin-bottom: 33px;
+    }
   }
 }
 
@@ -44,17 +54,22 @@
   font-weight: normal;
   color: rgb(51, 51, 51);
   text-align: center;
-  margin-bottom: 18px;
+  margin: 0 auto;
   padding: 0 20px;
-  line-height: 1.75;
+  line-height: 24px;
 
   @media (min-width: 768px) {
-    font-size: 21px;
+    font-size: 14px;
     padding: 0 60px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 88px;
+    width: 440px;
   }
 
   @media (min-width: 1200px) {
     padding: 0 120px;
+    margin-bottom: 59px;
   }
 }
 
@@ -70,11 +85,13 @@
 
 .main__main-form {
   padding: 0 20px;
+  padding-top: 15px;
 
   @media (min-width: 768px) {
     padding: 0 60px;
     display: grid;
     grid-template-columns: 50% 50%;
+    padding-bottom: 22px;
   }
 
   @media (min-width: 1200px) {
