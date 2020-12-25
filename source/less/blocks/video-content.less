@@ -1,19 +1,36 @@
 .video-content__lead {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   font-size: 18px;
+  line-height: 26px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 33px;
+    font-size: 30px;
+  }
 }
 
 .video-content__text {
-  margin: 0;
-  margin-bottom: 33px;
+  margin: 0 auto;
+  width: 266px;
+  margin-bottom: 34px;
   font-size: 14px;
+  line-height: 24px;
   font-weight: normal;
   color: rgb(51, 51, 51);
   text-align: center;
+
+  @media (min-width: 768px) {
+    width: 445px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 78px;
+  }
 }
 
 .video-content__content {

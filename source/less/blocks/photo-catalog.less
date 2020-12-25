@@ -1,9 +1,42 @@
 .photo-catalog__post {
   padding-top: 22px;
-  padding-bottom: 15px;
   position: relative;
 
+  &:nth-of-type(3) {
+    padding-top: 23px;
+  }
+
+  @media (max-width: 767px) {
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: -20px;
+      right: -20px;
+      top: -1px;
+      background-color: rgb(229, 229, 229);
+    }
+
+    &:last-of-type::after {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      left: -20px;
+      bottom: 1px;
+      background-color: rgb(229, 229, 229);
+    }
+  }
+
   @media (min-width: 768px) {
+    padding-top: 0;
+
+    &:nth-of-type(3) {
+      padding-top: 0;
+    }
+
     &:first-of-type {
       grid-column-start: 1;
       grid-column-end: 3;
@@ -15,6 +48,26 @@
       grid-column-start: 1;
       grid-column-end: 4;
       padding: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:first-of-type .post__description {
+      padding-right: 22px;
+    }
+
+    &:nth-of-type(even) .post__description {
+      padding-right: 29px;
+    }
+
+    &:nth-of-type(odd):not(:first-of-type) .post__description {
+      padding-right: 36px;
+    }
+  }
+
+  @media (max-width: 1200px) and (min-width: 768px) {
+    &:nth-of-type(odd):not(:first-of-type) .post__description {
+      background-color: rgb(234, 234, 234);
     }
   }
 }
