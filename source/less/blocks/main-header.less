@@ -95,8 +95,32 @@
 }
 
 .main-header__intro-image {
+  display: block;
+
   &--main-page {
     margin: 0 auto;
     padding-top: 90px;
+  }
+
+  &--inner-page {
+    margin: 0 auto;
+    padding-top: 52px;
+    width: 230px;
+  }
+
+  @media (min-width: 768px) {
+    &--inner-page {
+      padding-top: 95px;
+      width: 457px;
+      height: 78px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--inner-page {
+      padding-top: 101px;
+      width: 459.5px;
+      height: 79.8px;
+    }
   }
 }
