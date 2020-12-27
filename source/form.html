@@ -35,7 +35,11 @@
       <header class="page-body__header main-header">
         <div class="main-header__menu">
           <a class="main-header__logo logo">
-            <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logotype-tablet.svg">
+              <img class="logo__image" src="img/logo/logotyle-mobile.svg" alt="Наш логотип">
+            </picture>
           </a>
           <nav class="main-header__navigation main-navigation">
             <ul class="main-navigation__list">
