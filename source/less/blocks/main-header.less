@@ -39,29 +39,55 @@
   margin: 0 -18px;
   margin-top: -28px;
   background-color: rgb(226, 240, 249);
-  background-image: url("../img/back-mobile.jpg");
+  background-image: url("../img/background/back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/back-mobile@2x.jpg");
+    background-size: cover;
+  }
 
   &--inner-page {
     min-height: 158px;
     background-position-y: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-size: 282%;
+    }
   }
 
   @media (min-width: 768px) {
-    background-image: url("../img/back-desktop.jpg");
+    background-image: url("../img/background/back-desktop@1x.jpg");
     min-height: 519px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/back-desktop@2x.jpg");
+      background-size: cover;
+    }
 
     &--inner-page {
       min-height: 290px;
       background-position-y: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-size: 1200px;
+      }
     }
   }
 
   @media (min-width: 1200px) {
+    @media (min-resolution: 2dppx) {
+      background-size: contain;
+    }
+
     &--inner-page {
       min-height: 301px;
       background-position-y: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-size: 1200px;
+      }
     }
   }
 }
