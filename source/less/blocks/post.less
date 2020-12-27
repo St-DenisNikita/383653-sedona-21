@@ -1,25 +1,31 @@
 .post__link {
   display: block;
-  width: fit-content;
+  width: 100%;
 
   margin: 0 auto;
-  margin-bottom: 11px;
 }
 
 .post__description {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  padding-top: 14px;
+  padding-bottom: 20px;
 
   @media (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: rgb(242, 242, 242);
+    padding-top: 19px;
   }
 
   @media (min-width: 1200px) {
     padding: 0 21px;
+    padding-top: 19px;
+    padding-bottom: 20px;
     position: absolute;
     bottom: 0;
 
@@ -27,16 +33,21 @@
   }
 }
 
+.post__photo {
+  width: 100%;
+  height: auto;
+}
+
 .post__comment {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 9px;
   font-size: 14px;
   font-weight: bold;
   color: rgb(0, 0, 0);
 
   @media (min-width: 768px) {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 9px;
   }
 
   @media (min-width: 1200px) {
@@ -63,10 +74,22 @@
   }
 }
 
+.post__like {
+  @media (min-width: 768px) {
+    margin-top: -17px;
+  }
+}
+
 .post__like-counter {
   font-size: 14px;
   font-weight: bold;
   color: rgb(0, 0, 0);
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6px;
+  }
 
   @media (min-width: 1200px) {
     color: rgb(255, 255, 255);
@@ -74,5 +97,24 @@
 }
 
 .post__button-like {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  padding-top: 1px;
   cursor: pointer;
+  width: 23px;
+  height: 21px;
+  border: none;
+  margin-right: 10px;
+
+  @media (min-width: 768px) {
+    margin-right: 5px;
+  }
+}
+
+.post__icon-like {
+  color: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: 1200px) {
+    color: rgb(255, 255, 255);
+  }
 }

@@ -1,12 +1,88 @@
 .control {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.control__buttons {
-  background-color: rgb(242, 242, 242);
+  background: linear-gradient(rgba(0, 0, 0, 0.6) 45px, rgb(242, 242, 242) 45px);
 
   @media (min-width: 768px) {
-    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.control__inner {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  margin-bottom: 23px;
+
+  @media (min-width: 768px) {
+    order: 2;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+    width: 390px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 540px;
+  }
+}
+
+.control__button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  min-height: 20px;
+
+  &--replay {
+    width: 16px;
+    margin-left: 2px;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      order: 1;
+      margin-right: 0;
+    }
+  }
+
+  &--subtitles {
+    width: 32px;
+    margin-right: 31px;
+
+    @media (min-width: 768px) {
+      order: 3;
+    }
+  }
+
+  &--fullscreen {
+    width: 20px;
+
+    @media (min-width: 768px) {
+      order: 4;
+    }
+  }
+}
+
+.control__icon {
+  color: rgb(92, 104, 112);
+
+  &:hover {
+    color: rgb(51, 51, 51);
+  }
+
+  &:active {
+    color: rgba(51, 51, 51, 0.3);
+  }
+
+  @media (min-width: 768px) {
+    color: rgb(255, 255, 255);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -15,6 +91,54 @@
 .control__subtitles,
 .control__fullscreen {
   cursor: pointer;
+}
+
+.control__scale {
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    margin-top: -3px;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .control__replay {

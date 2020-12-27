@@ -35,7 +35,11 @@
       <header class="page-body__header main-header">
         <div class="main-header__menu">
           <a class="main-header__logo logo">
-            <img class="logo__image" src="https://via.placeholder.com/102x84" alt="Наш логотип">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logotype-tablet.svg">
+              <img class="logo__image" src="img/logo/logotyle-mobile.svg" alt="Наш логотип">
+            </picture>
           </a>
           <nav class="main-header__navigation">
             <ul class="main-navigation__list">
@@ -78,11 +82,13 @@
                 <p class="reasons__number">— №1 —</p>
                 <p class="reasons__short-description reasons__short-description--detailed">Седона не аттракцион для туристов, там течет&nbsp;своя жизнь</p>
               </div>
-              <picture class="reasons__picture reasons__picture--right">
-                <source media="(min-width: 1200px)" srcset="img/desktop-photo-city@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/tablet-photo-city@1x.jpg">
-                <img class="reasons__image" src="img/mobile-photo-city@1x.jpg" alt="Наш лучший мотель">
+              <div class="reasons__picture reasons__picture--right">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/index-image/desktop-photo-city@1x.jpg, img/index-image/desktop-photo-city@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/index-image/tablet-photo-city@1x.jpg, img/index-image/tablet-photo-city@2x.jpg 2x">
+                  <img class="reasons__image" src="img/index-image/mobile-photo-city@1x.jpg" srcset="img/index-image/mobile-photo-city@2x.jpg 2x" alt="Наш лучший мотель">
               </picture>
+              </div>
               <ul class="reasons__advantages advantages">
                 <li class="advantages__item advantages__item--housing">
                   <h3 class="advantages__title">Жилье</h3>
@@ -105,11 +111,13 @@
                 <p class="reasons__number">— №2 —</p>
                 <p class="reasons__short-description reasons__short-description--detailed">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
               </div>
-              <picture class="reasons__picture reasons__picture--left">
-                <source media="(min-width: 1200px)" srcset="img/desktop-photo-bridge@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/tablet-photo-bridge@1x.jpg">
-                <img class="reasons__image" src="img/mobile-photo-bridge@1x.jpg" alt="Главная достопремечательность Седоны - Мост Дьявола">
+              <div class="reasons__picture reasons__picture--left">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/index-image/desktop-photo-bridge@1x.jpg, img/index-image/desktop-photo-bridge@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/index-image/tablet-photo-bridge@1x.jpg, img/index-image/tablet-photo-bridge@2x.jpg 2x">
+                  <img class="reasons__image" src="img/index-image/mobile-photo-bridge@1x.jpg" srcset="img/index-image/mobile-photo-bridge@2x.jpg 2x" alt="Главная достопремечательность Седоны - Мост Дьявола">
               </picture>
+              </div>
             </li>
             <li class="reasons__item reasons__item--brief">
               <h2 class="reasons__title">Небольшая площадь</h2>
@@ -137,7 +145,6 @@
         <section class="main__map map">
           <h2 class="visually-hidden">Карта городка Седона и окрестностей</h2>
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d161649.27452011354!2d-111.93131474106427!3d34.815061088053895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1605431094705!5m2!1sru!2suk" width="320" height="350"></iframe>
-          <img class="map__image" src="https://via.placeholder.com/320x350" alt="Карта городка Седона и окрестностей" width="320" height="350">
         </section>
       </main>
       <footer class="page-body__footer main-footer">
