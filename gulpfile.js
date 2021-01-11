@@ -1,8 +1,10 @@
 const gulp = require("gulp");
+const rename = require("gulp-rename")
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
+const csso = require("postcss-csso");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 
@@ -14,8 +16,10 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
