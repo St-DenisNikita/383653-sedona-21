@@ -6,6 +6,7 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const csso = require("postcss-csso");
 const autoprefixer = require("autoprefixer");
+const imagemin = require("gulp-imagemin")
 const sync = require("browser-sync").create();
 
 // Styles
@@ -19,13 +20,27 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("styles.min.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// Images
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest("build/img"))
+}
+
+exports.images = images;
 
 // Server
 
