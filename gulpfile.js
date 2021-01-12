@@ -114,12 +114,12 @@ const server = (done) => {
 
 exports.server = server;
 
- // Reload
+// Reload
 
- const reload = done => {
+const reload = done => {
   sync.reload();
   done();
- }
+}
 
 // Build
 
