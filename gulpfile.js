@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+const del = require("del");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const plumber = require("gulp-plumber");
@@ -11,6 +12,12 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
+
+// Clean
+
+const clean = () => {
+  return del("build")
+}
 
 // Copy
 
