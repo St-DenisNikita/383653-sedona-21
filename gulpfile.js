@@ -12,6 +12,21 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/js/*.js"
+  ],
+  {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+}
+
+exports.copy = copy;
+
 // HTML
 
 const html = () => {
@@ -91,6 +106,19 @@ const server = (done) => {
 }
 
 exports.server = server;
+
+// Build
+
+//const build = gulp.parallel(
+ // html,
+ // styles,
+ // images,
+ // createWebp,
+ // sprite
+ // .pipe(gulp.dest("build"))
+//)
+
+//exports.build = build;
 
 // Watcher
 
