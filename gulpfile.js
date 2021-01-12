@@ -57,7 +57,7 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -80,9 +80,9 @@ exports.images = images;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("build/img/**/*.{jpg,png}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img/"))
 }
 
 exports.createWebp = createWebp;
@@ -93,7 +93,7 @@ const sprite = () => {
   return gulp.src("source/img/**/*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img/svg"))
 }
 
 exports.sprite = sprite;
@@ -103,7 +103,7 @@ exports.sprite = sprite;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -116,24 +116,21 @@ exports.server = server;
 
 // Build
 
-//const build = gulp.parallel(
- // html,
- // styles,
- // images,
- // createWebp,
- // sprite
- // .pipe(gulp.dest("build"))
-//)
+const build = gulp.series(
+  clean,
+  gulp.parallel(copy, html, styles, images, sprite),
+  createWebp
+)
 
-//exports.build = build;
+exports.build = build;
 
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html", sync.reload));
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
