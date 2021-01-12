@@ -1,5 +1,6 @@
 const gulp = require("gulp");
-const rename = require("gulp-rename")
+const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
@@ -10,6 +11,16 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
+
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"))
+}
+
+exports.html = html;
 
 // Styles
 
