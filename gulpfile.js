@@ -114,6 +114,13 @@ const server = (done) => {
 
 exports.server = server;
 
+ // Reload
+
+ const reload = done => {
+  sync.reload();
+  done();
+ }
+
 // Build
 
 const build = gulp.series(
@@ -128,7 +135,7 @@ exports.build = build;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html", sync.reload));
+  gulp.watch("source/*.html", gulp.series("html", reload));
 }
 
 exports.default = gulp.series(
