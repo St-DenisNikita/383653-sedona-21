@@ -8,6 +8,7 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const csso = require("postcss-csso");
 const autoprefixer = require("autoprefixer");
+const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -23,8 +24,7 @@ const clean = () => {
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/*.{woff2,woff}",
-    "source/js/*.js"
+    "source/fonts/*.{woff2,woff}"
   ],
   {
     base: "source"
@@ -62,6 +62,18 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// Scripts
+
+ const scripts = () => {
+  return gulp.src("source/js/*.js")
+  .pipe(uglify())
+  .pipe(gulp.dest("build/js"))
+  .pipe(rename("script.min.js"))
+  .pipe(sync.stream());
+ }
+
+ exports.scripts = scripts;
 
 // Images
 
@@ -125,7 +137,7 @@ const reload = done => {
 
 const build = gulp.series(
   clean,
-  gulp.parallel(copy, html, styles, images, sprite),
+  gulp.parallel(copy, html, styles, images, sprite, scripts),
   createWebp
 )
 
