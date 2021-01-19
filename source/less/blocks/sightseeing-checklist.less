@@ -110,6 +110,11 @@
   background-color: rgb(213, 213, 213);
 }
 
+.sightseeing-checklist__input:focus + .sightseeing-checklist__label::before {
+  outline: 2px solid rgb(213, 213, 213);
+  outline-offset: 3px;
+}
+
 .sightseeing-checklist__input + .sightseeing-checklist__label::after {
   content: "";
   display: none;

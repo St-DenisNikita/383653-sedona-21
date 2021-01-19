@@ -5,10 +5,18 @@
 }
 
 .copyright__link {
+  margin: 0 auto;
+  width: min-content;
+
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:focus {
+    outline: 2px outset rgb(129, 179, 210);
+    outline-offset: 3px;
+  }
 }
 
 .copyright__text {

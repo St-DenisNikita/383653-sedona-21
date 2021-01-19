@@ -75,6 +75,12 @@
 
 .impressions__input + .impressions__label:active::before {
   background-color: rgb(213, 213, 213);
+  outline: 7px solid red;
+}
+
+.impressions__input:focus + .impressions__label::before {
+  outline: 2px solid rgb(213, 213, 213);
+  outline-offset: 3px;
 }
 
 .impressions__input + .impressions__label::after {
