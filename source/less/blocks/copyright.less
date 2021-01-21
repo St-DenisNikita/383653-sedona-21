@@ -13,9 +13,8 @@
   justify-content: center;
   align-items: center;
 
-  &:focus {
-    outline: 2px outset rgb(129, 179, 210);
-    outline-offset: 3px;
+  &:active {
+    outline: none;
   }
 }
 
@@ -26,12 +25,14 @@
 .copyright__logo {
   display: inline-block;
   vertical-align: bottom;
+}
 
-  &:hover {
-    color: rgb(129, 179, 210);
-  }
+.copyright__link:hover .copyright__logo,
+.copyright__logo:hover {
+  color: rgb(129, 179, 210);
+}
 
-  &:active {
-    color: rgba(0, 0, 0, 0.3);
-  }
+.copyright__link:active .copyright__logo,
+.copyright__logo:active {
+  color: rgba(0, 0, 0, 0.3);
 }

@@ -102,17 +102,13 @@
   background-color: rgb(242, 242, 242);
 }
 
-.sightseeing-checklist__input + .sightseeing-checklist__label:hover::before {
+.sightseeing-checklist__input + .sightseeing-checklist__label:hover::before,
+.sightseeing-checklist__input:focus + .sightseeing-checklist__label::before {
   background-color: rgb(229, 229, 229);
 }
 
 .sightseeing-checklist__input + .sightseeing-checklist__label:active::before {
   background-color: rgb(213, 213, 213);
-}
-
-.sightseeing-checklist__input:focus + .sightseeing-checklist__label::before {
-  outline: 2px solid rgb(213, 213, 213);
-  outline-offset: 3px;
 }
 
 .sightseeing-checklist__input + .sightseeing-checklist__label::after {

@@ -15,12 +15,39 @@
   width: 100%;
 
   &:focus {
-    outline: 2px solid rgb(213, 213, 213);
-    outline-offset: 3px;
+    outline: none;
   }
 
   @media (min-width: 768px) {
     padding-top: 18px;
     margin-top: 80px;
   }
+}
+
+.comment__body:-ms-input-placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.comment__body::-webkit-input-placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.comment__body:-moz-placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.comment__body::-moz-placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 1;
 }
