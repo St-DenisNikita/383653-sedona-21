@@ -122,14 +122,14 @@
 }
 
 .reasons__inner {
-  padding: 0 5%;
+  padding: 0 5% 36.5px;
 
   @media (min-width: 768px) {
     width: auto;
     grid-row-start: 1;
     grid-row-end: 2;
-    padding: 0 12%;
-    padding-bottom: 15px;
+    padding-left: 12%;
+    padding-right: 12%;
 
     &--right {
       grid-column-start: 3;
@@ -146,12 +146,14 @@
 
   @media (min-width: 1200px) {
     &--right {
-      padding: 0 22%;
+      padding-left: 22%;
+      padding-right: 22%;
       padding-top: 50px;
     }
 
     &--left {
-      padding: 0 15%;
+      padding-left: 5%;
+      padding-right: 5%;
       padding-top: 46px;
     }
   }
@@ -266,21 +268,18 @@
     width: 288px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 36.5px;
     letter-spacing: -0.2px;
   }
 
   @media (min-width: 768px) {
     width: 194px;
     letter-spacing: -0.1px;
-    margin-bottom: 0;
   }
 
   @media (min-width: 1200px) {
     line-height: 19px;
     width: auto;
     letter-spacing: -0.1px;
-    margin-bottom: 0;
   }
 }
 
