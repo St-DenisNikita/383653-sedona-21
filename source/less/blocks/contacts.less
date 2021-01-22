@@ -8,15 +8,16 @@
   }
 
   @media (min-width: 1200px) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 41.5% 50%;
+    grid-gap: 8.5%;
   }
 }
 
 .contacts__item {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
 
   &:not(:last-child) {
@@ -32,7 +33,6 @@
   @media (min-width: 1200px) {
     padding-top: 26px;
     flex-direction: row;
-    width: 50%;
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -45,7 +45,6 @@
   font-size: 14px;
   color: rgb(51, 51, 51);
   padding-left: 21px;
-  position: relative;
 
   &--phone {
     margin-bottom: 9px;
@@ -65,15 +64,14 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     right: 0;
+    bottom: 0;
   }
 
   &--phone::before {
-    bottom: -67px;
     background-image: url("../img/svg/phone.svg");
   }
 
   &--email::before {
-    bottom: -64px;
     background-image: url("../img/svg/mail.svg");
   }
 
@@ -90,18 +88,6 @@
     &--email {
       margin-right: 18px;
     }
-
-    &::before {
-      bottom: -14px;
-    }
-
-    &--phone::before {
-      right: -331px;
-    }
-
-    &--email::before {
-      right: -334px;
-    }
   }
 }
 
@@ -112,8 +98,8 @@
 }
 
 .contacts__input {
+  flex-grow: 1;
   min-width: 1px;
-  width: 100%;
   box-sizing: border-box;
   cursor: pointer;
   border: 4px solid rgb(242, 242, 242);
@@ -138,16 +124,6 @@
 
   @media (min-width: 768px) {
     padding-right: 54px;
-  }
-
-  @media (min-width: 1200px) {
-    &--phone {
-      width: 65.625%;
-    }
-
-    &--email {
-      width: 65.77%;
-    }
   }
 }
 
