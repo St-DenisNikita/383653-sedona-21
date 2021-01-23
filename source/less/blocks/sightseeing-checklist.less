@@ -18,9 +18,10 @@
   margin: 0 auto;
 
   @media (min-width: 768px) {
-    min-height: 236px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 44% 44%;
+    grid-column-gap: 12%;
+    grid-row-gap: 8.5%;
     width: 70.99%;
     justify-content: space-between;
     margin-left: calc(14.5% + 2px);
@@ -29,8 +30,8 @@
   }
 
   @media (min-width: 1200px) {
-    display: grid;
     grid-template-columns: 27% 26.9% 24.7% 21.4%;
+    grid-column-gap: 0;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -43,6 +44,10 @@
     &:not(:last-child) {
       margin-bottom: 54px;
     }
+  }
+
+  @media (min-width: 768px) {
+    min-height: 75px;
   }
 
   @media (min-width: 1200px) {
